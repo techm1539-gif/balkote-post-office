@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balkote Post Office (193123) - Official Branch Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo-area">
+                <div class="post-logo"><i class="fa-solid fa-envelope-open-text"></i></div>
+                <div>
+                    <div class="logo-text">Balkote Post Office</div>
+                    <div class="sub-logo">PIN Code: 193123 | Jammu & Kashmir Circle</div>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#staff">Staff Info</a></li>
+                    <li><a href="#schemes">Account Schemes</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#search">Directory</a></li>
+                    <li><a href="#admin" class="btn-admin"><i class="fa-solid fa-user-lock"></i> Staff Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge"><i class="fa-solid fa-location-dot"></i> Branch Post Office Balkote</span>
+                <h1>Welcome to Balkote Post Office Portal</h1>
+                <p>Serving the local community of PIN 193123 with fast postal services, high-interest government savings schemes, and secure banking options.</p>
+                <div class="hero-btns">
+                    <a href="#schemes" class="btn btn-primary"><i class="fa-solid fa-piggy-bank"></i> View Savings Schemes</a>
+                    <a href="#calculator" class="btn btn-outline"><i class="fa-solid fa-calculator"></i> Calculate Returns</a>
+                </div>
+            </div>
+
+            <!-- Staff Highlight Card -->
+            <div class="staff-hero-card" id="staff">
+                <div class="card-header-badge"><i class="fa-solid fa-id-card"></i> Official Branch Officers</div>
+
+                <div class="officer-profile gold-border">
+                    <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="officer-details">
+                        <span class="role">Branch Postmaster (BPM)</span>
+                        <h3 id="bpm-name-display">BADRULNISA</h3>
+                        <span class="status-online"><i class="fa-solid fa-circle"></i> On Duty at Balkote BO</span>
+                    </div>
+                </div>
+
+                <div class="officer-profile">
+                    <div class="avatar"><i class="fa-solid fa-user-shield"></i></div>
+                    <div class="officer-details">
+                        <span class="role">Assistant BPM (ABPM)</span>
+                        <h3 id="abpm-name-display">BASHIR AHMAD</h3>
+                        <span class="status-online"><i class="fa-solid fa-circle"></i> Mail Delivery & Services</span>
+                    </div>
+                </div>
+
+                <div class="branch-meta">
+                    <div><i class="fa-solid fa-clock"></i> Timings: 09:00 AM - 04:00 PM</div>
+                    <div><i class="fa-solid fa-map-pin"></i> Location: Balkote, J&K (193123)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schemes / Accounts Section -->
+    <section class="section container" id="schemes">
+        <div class="section-title">
+            <h2>Post Office Savings & Investment Schemes</h2>
+            <p>Tap on any account below to read full benefits, eligibility criteria, and interest rates.</p>
+        </div>
+
+        <div class="schemes-grid">
+
+            <!-- Scheme 1 -->
+            <div class="scheme-card" onclick="openSchemeModal('ssa')">
+                <div class="scheme-tag">7.6% Interest</div>
+                <i class="fa-solid fa-child-female scheme-icon"></i>
+                <h3>Sukanya Samriddhi Account (SSA)</h3>
+                <p>Special high-interest savings scheme designed for the future education and marriage of girl child.</p>
+                <div class="card-footer-link">View Full Details <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+
+            <!-- Scheme 2 -->
+            <div class="scheme-card" onclick="openSchemeModal('ppf')">
+                <div class="scheme-tag">7.1% Interest</div>
+                <i class="fa-solid fa-shield-halved scheme-icon"></i>
+                <h3>Public Provident Fund (PPF)</h3>
+                <p>Long-term tax-saving investment option backed by Govt of India with guaranteed returns.</p>
+                <div class="card-footer-link">View Full Details <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+
+            <!-- Scheme 3 -->
+            <div class="scheme-card" onclick="openSchemeModal('sb')">
+                <div class="scheme-tag">4.0% Interest</div>
+                <i class="fa-solid fa-wallet scheme-icon"></i>
+                <h3>Post Office Savings Account (SB)</h3>
+                <p>Basic interest-bearing deposit account with ATM, checkbook, and IPPB mobile banking facilities.</p>
+                <div class="card-footer-link">View Full Details <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+
+            <!-- Scheme 4 -->
+            <div class="scheme-card" onclick="openSchemeModal('mis')">
+                <div class="scheme-tag">7.4% Interest</div>
+                <i class="fa-solid fa-money-bill-wave scheme-icon"></i>
+                <h3>Monthly Income Scheme (MIS)</h3>
+                <p>Deposit a lump sum amount once and receive guaranteed monthly income payouts for 5 years.</p>
+                <div class="card-footer-link">View Full Details <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+
+            <!-- Scheme 5 -->
+            <div class="scheme-card" onclick="openSchemeModal('nsc')">
+                <div class="scheme-tag">7.7% Interest</div>
+                <i class="fa-solid fa-certificate scheme-icon"></i>
+                <h3>National Savings Certificate (NSC)</h3>
+                <p>5-Year fixed tenure government savings bond with tax deduction benefits under Section 80C.</p>
+                <div class="card-footer-link">View Full Details <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+
+            <!-- Scheme 6 -->
+            <div class="scheme-card" onclick="openSchemeModal('td')">
+                <div class="scheme-tag">Up to 7.5%</div>
+                <i class="fa-solid fa-vault scheme-icon"></i>
+                <h3>Time Deposit / Fixed Deposit (TD)</h3>
+                <p>Flexible term deposits available for 1, 2, 3, or 5 years with compounded quarterly interest.</p>
+                <div class="card-footer-link">View Full Details <i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interest Calculator -->
+    <section class="section bg-light" id="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Post Office Interest & Deposit Calculator</h2>
+                <p>Estimate your returns and maturity values before opening an account.</p>
+            </div>
+
+            <div class="calc-wrapper">
+                <div class="calc-controls">
+                    <div class="form-group">
+                        <label>Select Scheme:</label>
+                        <select id="calc-scheme" onchange="calculateMaturity()">
+              <option value="ssa">Sukanya Samriddhi Account (7.6%)</option>
+              <option value="ppf">Public Provident Fund (7.1%)</option>
+              <option value="mis">Monthly Income Scheme (7.4%)</option>
+              <option value="nsc">NSC 5-Year Certificate (7.7%)</option>
+            </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Investment / Monthly Deposit Amount (₹):</label>
+                        <input type="number" id="calc-amount" value="50000" step="1000" oninput="calculateMaturity()">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tenure (Years):</label>
+                        <input type="number" id="calc-years" value="15" readonly>
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <h3>Calculated Summary</h3>
+                    <div class="result-row">
+                        <span>Total Principal Investment:</span>
+                        <strong id="res-principal">₹7,50,000</strong>
+                    </div>
+                    <div class="result-row">
+                        <span>Est. Total Interest Earned:</span>
+                        <strong id="res-interest" class="text-green">₹10,43,000</strong>
+                    </div>
+                    <div class="result-row total">
+                        <span>Estimated Maturity Amount:</span>
+                        <strong id="res-total">₹17,93,000</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- J&K Branch Search Directory -->
+    <section class="section container" id="search">
+        <div class="section-title">
+            <h2>Jammu & Kashmir Post Office Directory</h2>
+            <p>Search nearby post offices by PIN code, branch name, or district.</p>
+        </div>
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search Balkote, 193123, Srinagar, Jammu, Anantnag..." onkeyup="filterPostOffices()">
+        </div>
+
+        <div class="table-responsive">
+            <table class="po-table">
+                <thead>
+                    <tr>
+                        <th>Post Office Name</th>
+                        <th>Pincode</th>
+                        <th>Type</th>
+                        <th>District</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="poTableBody">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Staff Admin Update Section -->
+    <section class="section bg-light" id="admin">
+        <div class="container">
+            <div class="admin-card">
+                <h3><i class="fa-solid fa-user-gear"></i> Staff / Officer Announcement Panel</h3>
+                <p>BPM Badrulnisa / ABPM Bashir Ahmad can update local notice board announcements here.</p>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <label>Update Public Notice / Announcement:</label>
+                    <textarea id="noticeInput" rows="3" placeholder="Enter notice (e.g. Special Aadhaar camp at Balkote BO on Monday...)"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="saveNotice()"><i class="fa-solid fa-floppy-disk"></i> Publish Notice</button>
+
+                <div class="current-notice" id="noticeDisplay">
+                    <strong>Current Notice:</strong> <span id="noticeText">Welcome to Balkote BO! Account opening camps are held every Wednesday.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Scheme Details -->
+    <div class="modal-overlay" id="schemeModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeSchemeModal()">&times;</button>
+            <div id="modalBody">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Balkote Branch Post Office (193123)</strong></p>
+            <p>Circle: Jammu & Kashmir | Division: Baramulla / Regional Postal Services</p>
+            <p style="font-size: 12px; margin-top: 10px; opacity: 0.8;">BPM: BADRULNISA | ABPM: BASHIR AHMAD</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
